@@ -11,10 +11,10 @@ def predict(file_name):
     prediction, idx, accuracy = cat_vs_dog_model.predict(img)
 
     if prediction == "True":
-        print("I am", accuracy[2][1] * 100, "% confident that this is a cat image")
+        print("I am", accuracy * 100, "% confident that this is a cat image")
         return "cat"
     else:
-        print("I am", accuracy[2][0] * 100, "% confident that this is a dog image")
+        print("I am", accuracy * 100, "% confident that this is a dog image")
         return "Dog"
 
 st.text("Cat vs Dog Classifier")
