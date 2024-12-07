@@ -14,7 +14,7 @@ def predict(file_name):
 
         return "Cat"
     else:
-        return f"Dog {accuracy*100:.2f}%"
+        return f"Dog {accuracy}%"
 
 st.text("Cat vs Dog Classifier")
 st.text("Built by Jayden Hang")
