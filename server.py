@@ -12,9 +12,9 @@ def predict(file_name):
 
     if prediction == "True":
 
-        return "cat"
+        return "I am ", " cat"
     else:
-        return "Dog"
+        return "I am ", " cat"
 
 st.text("Cat vs Dog Classifier")
 st.text("Built by Jayden Hang")
@@ -25,4 +25,4 @@ if uploaded_file is not None:
     prediction = predict(uploaded_file)
     st.image(uploaded_file, caption=prediction, use_column_width=True)
     st.text(accuracy)
-    st.text(idx)
+
