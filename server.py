@@ -14,7 +14,7 @@ def predict(file_name):
 
         return f"Dog {accuracy*100}%"
     else:
-        return f"Dog {accuracy * 100}%"
+        return f"Dog {accuracy[1][0] * 100}%"
 
 st.text("Cat vs Dog Classifier")
 st.text("Built by Jayden Hang")
@@ -24,5 +24,4 @@ uploaded_file = st.file_uploader("Choose an image...", type=["jpg","png","jpeg"]
 if uploaded_file is not None:
     prediction = predict(uploaded_file)
     st.image(uploaded_file, caption=prediction, use_column_width=True)
-    st.text(accuracy)
 
