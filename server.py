@@ -25,3 +25,4 @@ if uploaded_file is not None:
     prediction = predict(uploaded_file)
     st.image(uploaded_file, caption=prediction, use_column_width=True)
     st.text(accuracy)
+    st.text(idx)
