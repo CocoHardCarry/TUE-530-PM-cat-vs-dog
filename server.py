@@ -11,10 +11,9 @@ def predict(file_name):
     prediction, idx, accuracy = cat_vs_dog_model.predict(img)
 
     if prediction == "True":
-        print("I am", accuracy * 100, "% confident that this is a cat image")
+
         return "cat"
     else:
-        print("I am", accuracy * 100, "% confident that this is a dog image")
         return "Dog"
 
 st.text("Cat vs Dog Classifier")
@@ -25,3 +24,4 @@ uploaded_file = st.file_uploader("Choose an image...", type=["jpg","png","jpeg"]
 if uploaded_file is not None:
     prediction = predict(uploaded_file)
     st.image(uploaded_file, caption=prediction, use_column_width=True)
+    print(prediction, idx, accuracy)
