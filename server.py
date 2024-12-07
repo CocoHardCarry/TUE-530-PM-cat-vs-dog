@@ -12,7 +12,7 @@ def predict(file_name):
 
     if prediction == "True":
 
-        return f"Cat {accuracy * 100}%"
+        return f"I am {accuracy[1] * 100}% confident that this is a cat."
     else:
         return f"I am {accuracy[0] * 100}% confident that this is a dog."
 
