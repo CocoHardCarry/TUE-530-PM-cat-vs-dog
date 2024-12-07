@@ -12,9 +12,9 @@ def predict(file_name):
 
     if prediction == "True":
 
-        return f"Dog {accuracy*100}%"
+        return f"Cat {accuracy * 100}%"
     else:
-        return f"Dog {accuracy[1][0] * 100}%"
+        return f"I am {accuracy * 100}% confident that this is a dog"
 
 st.text("Cat vs Dog Classifier")
 st.text("Built by Jayden Hang")
