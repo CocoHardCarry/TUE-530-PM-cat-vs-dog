@@ -24,4 +24,4 @@ uploaded_file = st.file_uploader("Choose an image...", type=["jpg","png","jpeg"]
 if uploaded_file is not None:
     prediction = predict(uploaded_file)
     st.image(uploaded_file, caption=prediction, use_column_width=True)
-    print(prediction, idx, accuracy)
+    print(accuracy)
