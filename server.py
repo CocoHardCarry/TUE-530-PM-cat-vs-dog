@@ -9,11 +9,13 @@ cat_vs_dog_model = load_learner("cat_vs_dog_model.pkl")
 def predict(file_name):
     img = PILImage.create(file_name)
     prediction, idx, accuracy = cat_vs_dog_model.predict(img)
+
     if prediction == "True":
+        print("I am", prediction[2][1] * 100, "% confident that this is a cat image")
         return "cat"
     else:
+        print("I am", prediction[2][0] * 100, "% confident that this is a dog image")
         return "Dog"
-
 
 st.text("Cat vs Dog Classifier")
 st.text("Built by Jayden Hang")
